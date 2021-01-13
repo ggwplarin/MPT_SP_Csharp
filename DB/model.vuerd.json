@@ -1,9 +1,9 @@
 {
   "canvas": {
     "width": 2000,
-    "height": 2000,
+    "height": 600,
     "scrollTop": 0,
-    "scrollLeft": 903,
+    "scrollLeft": 0,
     "show": {
       "tableComment": true,
       "columnComment": false,
@@ -301,7 +301,7 @@
             "id": "3715f5e8-2958-9e22-c843-9178d9d4af83"
           },
           {
-            "name": "antique_thing_story",
+            "name": "antique_thing_story_id",
             "comment": "",
             "dataType": "int",
             "default": "",
@@ -316,7 +316,7 @@
               "pk": false,
               "fk": true,
               "pfk": false,
-              "widthName": 115,
+              "widthName": 133,
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
@@ -328,7 +328,7 @@
           "active": false,
           "left": 498,
           "top": 153,
-          "zIndex": 306,
+          "zIndex": 343,
           "widthName": 60,
           "widthComment": 60
         },
@@ -385,7 +385,7 @@
             "id": "1261f81d-b891-8500-c970-3a0c6a5d4ef2"
           },
           {
-            "name": "antique_thing_id",
+            "name": "setout_antique_thing_id",
             "comment": "",
             "dataType": "int",
             "default": "",
@@ -400,7 +400,7 @@
               "pk": false,
               "fk": true,
               "pfk": false,
-              "widthName": 97,
+              "widthName": 140,
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
@@ -412,7 +412,7 @@
           "active": false,
           "left": 1057,
           "top": 98,
-          "zIndex": 319,
+          "zIndex": 345,
           "widthName": 60,
           "widthComment": 60
         },
@@ -469,7 +469,7 @@
             "id": "3862f3b8-3e0c-e7b4-d216-625ba9b602eb"
           },
           {
-            "name": "setout_position_id",
+            "name": "sale_setout_position_id",
             "comment": "",
             "dataType": "int",
             "default": "",
@@ -484,7 +484,7 @@
               "pk": false,
               "fk": true,
               "pfk": false,
-              "widthName": 107,
+              "widthName": 138,
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
@@ -492,7 +492,7 @@
             "id": "b073718e-e0d8-9501-bd51-be42cf88fa93"
           },
           {
-            "name": "aciquirer_id",
+            "name": "sale_acquirer_id",
             "comment": "",
             "dataType": "int",
             "default": "",
@@ -507,7 +507,7 @@
               "pk": false,
               "fk": true,
               "pfk": false,
-              "widthName": 69,
+              "widthName": 97,
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
@@ -518,8 +518,8 @@
         "ui": {
           "active": false,
           "left": 1598,
-          "top": 250,
-          "zIndex": 315,
+          "top": 237,
+          "zIndex": 361,
           "widthName": 60,
           "widthComment": 60
         },
@@ -530,7 +530,7 @@
         "comment": "Покупатель",
         "columns": [
           {
-            "name": "aciquirer_id",
+            "name": "acquirer_id",
             "comment": "",
             "dataType": "int",
             "default": "",
@@ -545,7 +545,7 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 69,
+              "widthName": 66,
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
@@ -553,7 +553,7 @@
             "id": "8e70737f-34a1-e0e0-d549-7cb3e69676d1"
           },
           {
-            "name": "aciquirer_first_name",
+            "name": "acquirer_first_name",
             "comment": "",
             "dataType": "text",
             "default": "",
@@ -568,7 +568,7 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 120,
+              "widthName": 117,
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
@@ -576,7 +576,7 @@
             "id": "5f0eca08-a91c-6a5f-56e9-a43480c61494"
           },
           {
-            "name": "aciquirer_last_name",
+            "name": "acquirer_last_name",
             "comment": "",
             "dataType": "text",
             "default": "",
@@ -591,7 +591,7 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 119,
+              "widthName": 116,
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
@@ -601,9 +601,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1052,
-          "top": 420,
-          "zIndex": 304,
+          "left": 1060,
+          "top": 374.5,
+          "zIndex": 362,
           "widthName": 60,
           "widthComment": 72
         },
@@ -670,7 +670,7 @@
           "columnIds": [
             "7be42f38-5a47-15cb-23f2-d12e58b1f9a0"
           ],
-          "x": 1404,
+          "x": 1419,
           "y": 163.25,
           "direction": "right"
         },
@@ -680,7 +680,7 @@
             "b073718e-e0d8-9501-bd51-be42cf88fa93"
           ],
           "x": 1598,
-          "y": 287.75,
+          "y": 274.75,
           "direction": "left"
         },
         "id": "b7364c7a-f933-b2ad-827a-5351f0b8104f",
@@ -693,8 +693,8 @@
           "columnIds": [
             "8e70737f-34a1-e0e0-d549-7cb3e69676d1"
           ],
-          "x": 1394,
-          "y": 485.25,
+          "x": 1399,
+          "y": 439.75,
           "direction": "right"
         },
         "end": {
@@ -703,7 +703,7 @@
             "06693a7d-d96d-9f32-867e-a45eed726f44"
           ],
           "x": 1598,
-          "y": 363.25,
+          "y": 350.25,
           "direction": "left"
         },
         "id": "013db507-d66b-06eb-b816-a7a420a7240e",
