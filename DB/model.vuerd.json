@@ -37,11 +37,11 @@
   "table": {
     "tables": [
       {
-        "name": "users",
-        "comment": "Учетные записи пользователей",
+        "name": "shop_users",
+        "comment": "",
         "columns": [
           {
-            "name": "user_id",
+            "name": "shop_user_id",
             "comment": "",
             "dataType": "int",
             "default": "",
@@ -56,7 +56,7 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 60,
+              "widthName": 80,
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
@@ -64,7 +64,7 @@
             "id": "48ea9f43-48f3-bcf5-2356-fbe8a71aef67"
           },
           {
-            "name": "user_login",
+            "name": "shop_user_login",
             "comment": "",
             "dataType": "text",
             "default": "",
@@ -79,7 +79,7 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 62,
+              "widthName": 97,
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
@@ -87,7 +87,7 @@
             "id": "c3c2f0ce-cff6-0a6b-7e4d-ca4a35eb8c80"
           },
           {
-            "name": "user_password",
+            "name": "shop_user_password",
             "comment": "",
             "dataType": "text",
             "default": "",
@@ -102,7 +102,7 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 90,
+              "widthName": 126,
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
@@ -112,17 +112,17 @@
         ],
         "ui": {
           "active": false,
-          "left": 61,
-          "top": 283,
-          "zIndex": 300,
-          "widthName": 60,
-          "widthComment": 192
+          "left": 54,
+          "top": 284,
+          "zIndex": 407,
+          "widthName": 69,
+          "widthComment": 60
         },
         "id": "44c85d08-017a-4934-69b1-a6441e62da8c"
       },
       {
-        "name": "archive",
-        "comment": "Архив историй",
+        "name": "story_archive",
+        "comment": "",
         "columns": [
           {
             "name": "story_id",
@@ -198,15 +198,15 @@
           "active": false,
           "left": 52,
           "top": 94,
-          "zIndex": 301,
-          "widthName": 60,
-          "widthComment": 91
+          "zIndex": 393,
+          "widthName": 79,
+          "widthComment": 60
         },
         "id": "2eaef5c0-cb47-2362-51bc-6a55185f1547"
       },
       {
         "name": "antiques ",
-        "comment": "Товар",
+        "comment": "",
         "columns": [
           {
             "name": "antique_thing_id",
@@ -328,7 +328,7 @@
           "active": false,
           "left": 498,
           "top": 153,
-          "zIndex": 343,
+          "zIndex": 379,
           "widthName": 60,
           "widthComment": 60
         },
@@ -336,7 +336,7 @@
       },
       {
         "name": "setout",
-        "comment": "Витриа",
+        "comment": "",
         "columns": [
           {
             "name": "setout_position_id",
@@ -412,7 +412,7 @@
           "active": false,
           "left": 1057,
           "top": 98,
-          "zIndex": 345,
+          "zIndex": 381,
           "widthName": 60,
           "widthComment": 60
         },
@@ -420,7 +420,7 @@
       },
       {
         "name": "cashbox",
-        "comment": "Касса",
+        "comment": "",
         "columns": [
           {
             "name": "sale_id",
@@ -429,13 +429,13 @@
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": false,
+              "primaryKey": true,
               "unique": false,
               "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": false,
+              "pk": true,
               "fk": false,
               "pfk": false,
               "widthName": 60,
@@ -519,7 +519,7 @@
           "active": false,
           "left": 1598,
           "top": 237,
-          "zIndex": 361,
+          "zIndex": 387,
           "widthName": 60,
           "widthComment": 60
         },
@@ -527,7 +527,7 @@
       },
       {
         "name": "acquirers",
-        "comment": "Покупатель",
+        "comment": "",
         "columns": [
           {
             "name": "acquirer_id",
@@ -603,9 +603,9 @@
           "active": false,
           "left": 1060,
           "top": 374.5,
-          "zIndex": 362,
+          "zIndex": 383,
           "widthName": 60,
-          "widthComment": 72
+          "widthComment": 60
         },
         "id": "c07083ea-2178-5ce8-eff7-e1a9f57ae35c"
       }
@@ -638,7 +638,7 @@
           "direction": "left"
         },
         "id": "0fd35dd0-7fda-a3e6-ca41-4ad328998e55",
-        "relationshipType": "ZeroOneN"
+        "relationshipType": "N"
       },
       {
         "identification": false,
@@ -661,7 +661,7 @@
           "direction": "left"
         },
         "id": "d63e9240-af41-63d0-b215-0acb169ab1b5",
-        "relationshipType": "ZeroOneN"
+        "relationshipType": "OneOnly"
       },
       {
         "identification": false,
@@ -684,7 +684,7 @@
           "direction": "left"
         },
         "id": "b7364c7a-f933-b2ad-827a-5351f0b8104f",
-        "relationshipType": "ZeroOneN"
+        "relationshipType": "One"
       },
       {
         "identification": false,
@@ -707,7 +707,7 @@
           "direction": "left"
         },
         "id": "013db507-d66b-06eb-b816-a7a420a7240e",
-        "relationshipType": "ZeroOneN"
+        "relationshipType": "One"
       }
     ]
   }
