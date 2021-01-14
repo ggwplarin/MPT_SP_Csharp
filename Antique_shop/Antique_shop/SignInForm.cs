@@ -25,7 +25,7 @@ namespace Antique_shop
         }
         private void btn_signIn_Click(object sender, EventArgs e)
         {
-            if (!SignInFieldsValidation(tb_login.Text, tb_password.Text))
+            if (!ValidateSignInForm(tb_login.Text, tb_password.Text))
                 MessageBox.Show(Properties.Strings.SignInForm_MB_SignInFieldsValidationFailed_text, Properties.Strings.SignInForm_MB_SignInFieldsValidationFailed_caption);
             else
             {
@@ -58,7 +58,7 @@ namespace Antique_shop
             }
         }
 
-        public bool SignInFieldsValidation(string login, string password)
+        public bool ValidateSignInForm(string login, string password)
         {
             if (string.IsNullOrWhiteSpace(login) & string.IsNullOrWhiteSpace(password)) return false;
             const string symbols = "!@#$%^&?*()[]{}";
