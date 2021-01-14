@@ -61,6 +61,15 @@ namespace Antique_shop.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Элемент успешно добавлен..
+        /// </summary>
+        internal static string DBAdminForm_MB_ElementAdd_Succes_text {
+            get {
+                return ResourceManager.GetString("DBAdminForm_MB_ElementAdd_Succes_text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Ошибка входа!.
         /// </summary>
         internal static string SignInForm_MB_SignInFieldsValidationFailed_caption {

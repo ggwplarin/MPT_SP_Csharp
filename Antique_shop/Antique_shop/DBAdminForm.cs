@@ -12,14 +12,14 @@ namespace Antique_shop
             InitializeComponent();
         }
         private TabControl tc_main;
-        private TabPage tabPage1;
+        private TabPage tp_shop_users;
         private TabPage tp_antiques;
         private TabPage tp_setout;
         private TabPage tp_acquirers;
         private TabPage tp_cashbox;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button btn_add;
+        private Button btn_update;
+        private Button btn_delete;
         private TextBox textBox2;
         private TextBox textBox1;
         private TextBox textBox4;
@@ -41,7 +41,7 @@ namespace Antique_shop
         private void InitializeComponent()
         {
             this.tc_main = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tp_shop_users = new System.Windows.Forms.TabPage();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tp_story_archive = new System.Windows.Forms.TabPage();
@@ -62,12 +62,12 @@ namespace Antique_shop
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tc_main.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tp_shop_users.SuspendLayout();
             this.tp_story_archive.SuspendLayout();
             this.tp_antiques.SuspendLayout();
             this.tp_setout.SuspendLayout();
@@ -78,7 +78,7 @@ namespace Antique_shop
             // 
             // tc_main
             // 
-            this.tc_main.Controls.Add(this.tabPage1);
+            this.tc_main.Controls.Add(this.tp_shop_users);
             this.tc_main.Controls.Add(this.tp_story_archive);
             this.tc_main.Controls.Add(this.tp_antiques);
             this.tc_main.Controls.Add(this.tp_setout);
@@ -91,17 +91,17 @@ namespace Antique_shop
             this.tc_main.TabIndex = 0;
             this.tc_main.SelectedIndexChanged += new System.EventHandler(this.tc_main_SelectedIndexChanged);
             // 
-            // tabPage1
+            // tp_shop_users
             // 
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(450, 156);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Пользователи";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tp_shop_users.Controls.Add(this.textBox2);
+            this.tp_shop_users.Controls.Add(this.textBox1);
+            this.tp_shop_users.Location = new System.Drawing.Point(4, 24);
+            this.tp_shop_users.Name = "tp_shop_users";
+            this.tp_shop_users.Padding = new System.Windows.Forms.Padding(3);
+            this.tp_shop_users.Size = new System.Drawing.Size(450, 156);
+            this.tp_shop_users.TabIndex = 0;
+            this.tp_shop_users.Text = "Пользователи";
+            this.tp_shop_users.UseVisualStyleBackColor = true;
             // 
             // textBox2
             // 
@@ -292,32 +292,33 @@ namespace Antique_shop
             this.comboBox3.TabIndex = 0;
             this.comboBox3.Text = "Товар";
             // 
-            // button1
+            // btn_add
             // 
-            this.button1.Location = new System.Drawing.Point(16, 202);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Добавить";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_add.Location = new System.Drawing.Point(16, 202);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(75, 23);
+            this.btn_add.TabIndex = 1;
+            this.btn_add.Text = "Добавить";
+            this.btn_add.UseVisualStyleBackColor = true;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
-            // button2
+            // btn_update
             // 
-            this.button2.Location = new System.Drawing.Point(97, 202);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Изменить";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_update.Location = new System.Drawing.Point(97, 202);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(75, 23);
+            this.btn_update.TabIndex = 2;
+            this.btn_update.Text = "Изменить";
+            this.btn_update.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_delete
             // 
-            this.button3.Location = new System.Drawing.Point(178, 202);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Удалить";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_delete.Location = new System.Drawing.Point(178, 202);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(75, 23);
+            this.btn_delete.TabIndex = 3;
+            this.btn_delete.Text = "Удалить";
+            this.btn_delete.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -332,14 +333,14 @@ namespace Antique_shop
             // 
             this.ClientSize = new System.Drawing.Size(482, 653);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_delete);
+            this.Controls.Add(this.btn_update);
+            this.Controls.Add(this.btn_add);
             this.Controls.Add(this.tc_main);
             this.Name = "DBAdminForm";
             this.tc_main.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tp_shop_users.ResumeLayout(false);
+            this.tp_shop_users.PerformLayout();
             this.tp_story_archive.ResumeLayout(false);
             this.tp_story_archive.PerformLayout();
             this.tp_antiques.ResumeLayout(false);
@@ -358,10 +359,28 @@ namespace Antique_shop
         {
 
         }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
+        
+        private void btn_add_Click(object sender, EventArgs e)
         {
+            if ((tc_main.SelectedTab.Name) switch
+            {
+                "tp_shop_users" => true,
+                "tp_story_archive" => true,
+                "tp_antiques" => true,
+                "tp_setout" => true,
+                "tp_acquirers" => true,
+                "tp_cashbox" => true,
+                _ => false
+            })
+            {
 
+            }
         }
+
+        public bool ValidateShopUsersForm()
+        {
+            return true;
+        }
+
     }
 }
