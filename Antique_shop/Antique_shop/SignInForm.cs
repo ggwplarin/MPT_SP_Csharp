@@ -27,9 +27,34 @@ namespace Antique_shop
         {
             if (!SignInFieldsValidation(tb_login.Text, tb_password.Text))
                 MessageBox.Show(Properties.Strings.SignInForm_MB_SignInFieldsValidationFailed_text, Properties.Strings.SignInForm_MB_SignInFieldsValidationFailed_caption);
-            using (SqlCo)
+            else
             {
-                
+                using var connection = new SqlConnection(ConStr);
+                try
+                {
+                    connection.Open();
+                    var cmdText =
+                        $"SELECT * FROM shop_users WHERE shop_user_login = '{tb_login.Text}' AND shop_user_password = '{tb_password.Text}'";
+                    using var command = new SqlCommand(cmdText, connection);
+                    if (command.ExecuteScalar() != null)
+                    {
+                        var dbAdminForm = new DBAdminForm();
+                        dbAdminForm.Show();
+                        Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show(Properties.Strings.SignInForm_MB_SignInFieldsValidationFailed_text, Properties.Strings.SignInForm_MB_SignInFieldsValidationFailed_caption);
+                    }
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show(exception.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
             }
         }
 
